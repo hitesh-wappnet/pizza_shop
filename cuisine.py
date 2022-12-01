@@ -1,15 +1,20 @@
-class Cuisine:
+import os
+from abc import ABC, abstractmethod
+
+class Cuisine(ABC):
     def __init__(self):
         self.Reg = None
         self.Med = None
         self.Large = None
         self.ingredients = []
-        
+    
+    @abstractmethod
     def setPrice(self):
         pass
     
-    def setIngredients(self):
-        pass
+    def setIngredients(self,ing):
+        for i in ing:
+            self.ingredients.append(i)
     
     def getIngredients(self):
         ret = ""
@@ -24,7 +29,5 @@ class Cuisine:
             return self.Reg
         elif size == "Med":
             return self.Med
-        elif size == "Large":
-            return self.Large
         else:
-            return "Invalid Choice !!"
+            return self.Large
