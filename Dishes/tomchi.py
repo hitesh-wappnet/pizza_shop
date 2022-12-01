@@ -1,9 +1,4 @@
-class Tomichi(Classic): 
-    def setIngredients(self):
-        self.ingredients.append("Tomato")
-        self.ingredients.append("Onion")
-        self.ingredients.append("Chilly & Cheese")
-        
+class Tomchi(Classic):    
     def __init__(self):
-        super().__init__(self)
-        self.setIngredients()
+        super().__init__()
+        self.setIngredients(["Tomato","Onion","Chilly & Cheese"]) 
